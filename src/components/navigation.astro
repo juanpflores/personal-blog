@@ -1,0 +1,57 @@
+---
+import Hamburger from './hamburger.astro';
+---
+<Hamburger />
+<div class="nav-links">
+  <a href="/">Home</a>
+  <a href="/blog/">Blog</a>
+  <a href="/grimmoire">Grimmoire</a>
+  <a href="/research">Research</a>
+  <a href="/talks">Talks</a>
+  <a href="/bio">Bio</a>
+</div>
+
+<style>
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover {
+    color: #007bff;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links.active {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+    }
+  });
+</script>

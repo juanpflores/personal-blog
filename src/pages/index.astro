@@ -1,26 +1,12 @@
 ---
-const pageTitle = "About Me"
-const skillColor = "navy";
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../styles/global.css';
+const pageTitle = "Juan P Flores – juanpflores.dev"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-	<style define:vars={{skillColor}}>
-      h1 {
-        color: var(--skillColor);
-        font-size: 4rem;
-      }
-    </style>
-</head>
-<body>
-    <h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
 
   <p>I’m Juan Pablo Flores, a technologist, educator, and community builder who’s obsessed with making knowledge more accessible and creativity more collaborative. Over the years, I’ve worked with students, teachers, and developers around the world to launch programs, build academic networks, and host workshops that make complex tools (like AI, design systems, or simulations) feel a little less intimidating and a lot more empowering.</p>
   <p>My background blends code, pedagogy, and strategy but what really drives me is seeing people light up when they realize they can build, contribute, and shape the spaces they’re in. I’ve led global initiatives, helped scale outreach at companies like GitHub, and built programs from scratch that serve thousands. I know how to translate between technical teams and curious learners and I care just as much about the people in the room as the tech on the screen.</p>
   <p>At the core, I build for the people who’ve been told “this isn’t for you” and I work to prove that it absolutely is. If you’re creating something bold, thoughtful, or experimental. Let’s talk!</p>
-</body>
-</html>
+</BaseLayout>
+
